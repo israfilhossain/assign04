@@ -39,6 +39,14 @@ function slicearray($array_Values)
 4.Write a PHP function to check if a string contains only letters and whitespace.
  */
 
+function ValidateStringByAlphaSpace($input)
+{
+    if (preg_match('/^[\p{L&} ]+$/u', $input)) {
+        return "String contains only letters and whitespace";
+    } else {
+        return "Emtpy string or other characters too";
+    }
+}
 
 
 
